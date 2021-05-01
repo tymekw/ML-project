@@ -1,1 +1,21 @@
 # ML-project
+Projekt polega na wybraniu 2-3 modeli pozwalających na wykrycie pojazdów w ruchu kołowym. Przeprowadzeniu ich analizy, przetestowaniu w kontekście skuteczności z wykorzystaniem odpowiednich miar (skuteczności, macierzy pomyłek). Przeprowadzeniu analizy w warunkach zmiany rozdzielczości obrazu.
+
+- YOLO
+- resnet?
+- mobilnet?
+
+
+
+- skuteczność
+    - czułość
+    - f1?
+
+
+- macierz pomyłek
+
+
+- analiza skuteczności pod kątem wielkości obiektu
+    - zmiana rozdzielczości
+    - adaptiv pulling?
+
