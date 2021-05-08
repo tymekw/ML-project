@@ -43,7 +43,7 @@ for i in range(0,10):
     image1, label1 = next(iterator)
     result, x = predict(image1)
     plt.figure()
-    plt.imshow(x)
+    plt.imshow(image1)
     plt.show()
     print("is: " + imagenet[label1.numpy()])
 
