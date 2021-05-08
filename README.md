@@ -22,5 +22,7 @@ Projekt polega na wybraniu 2-3 modeli pozwalających na wykrycie pojazdów w ruc
 
 
 - WORKING MODELS:
-  - https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1
-  - https://tfhub.dev/google/openimages_v4/ssd/mobilenet_v2/1
+  - MODEL/
+    - https://tfhub.dev/google/faster_rcnn/openimages_v4/inception_resnet_v2/1
+  - MODEL_mobilenet/
+    - https://tfhub.dev/google/openimages_v4/ssd/mobilenet_v2/1
