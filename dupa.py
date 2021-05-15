@@ -19,25 +19,16 @@ import tensorflow as tf
 # detector = hub.load("https://tfhub.dev/tensorflow/faster_rcnn/resnet50_v1_1024x1024/1") # ALSO works dope but waaaay slower
 detector = hub.load("https://tfhub.dev/tensorflow/ssd_mobilenet_v2/fpnlite_320x320/1") # WORKS FAAST
 
-#%%
-
-def predict(my_image):
-    # commented for open_image_from_google
-    # my_image = image.smart_resize(my_image, size=(1024, 1024))
 
 
-    x = image.img_to_array(my_image)
-    x = tf.image.resize(my_image, [100, 100], preserve_aspect_ratio=True)
-    x = np.expand_dims(x, axis=0)
-    preds = detector(x)
-    return preds
-
-def predict_single_image(path="D:\\AGH\\VI semestr\\ML\\datasetGoogle\\OIDv4_ToolKit\\OID\\Dataset\\test\\Baseball glove\\0298c70279b6e842.jpg"):
-    # image_name = os.path.basename(path).split(".")[0]
-    image_ = Image.open(path)
-    result = predict(image_)
-    results = {key:value.numpy() for key,value in result.items()}
-    return results
+path="D:\\AGH\\VI semestr\\ML\\datasetGoogle\\OIDv4_ToolKit\\OID\\Dataset\\test\\Baseball glove\\0298c70279b6e842.jpg"
+image_ = Image.open(path)
+x = image.img_to_array(image_)
+x1 = tf.image.resize(x, [3840, 2160], preserve_aspect_ratio=True)
+x2 = np.expand_dims(x1, axis=0)
+preds = detector(x2)
+results = {key:value.numpy() for key,value in preds.items()}
+print(results)
 
 
 #
@@ -56,7 +47,3 @@ def predict_single_image(path="D:\\AGH\\VI semestr\\ML\\datasetGoogle\\OIDv4_Too
 #   return tf.image.resize_images(image, [new_width, new_height])
 #
 
-
-result = predict_single_image()
-
-#1024x648
