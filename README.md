@@ -4,4 +4,4 @@ Comparison of ML models on detecting multiple objects, confusion matrix and othe
 - resnet
 - mobilnet
 
-results available in results.docx
+results available in pdfs
