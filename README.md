@@ -3,3 +3,5 @@ Comparison of ML models on detecting multiple objects, confusion matrix and othe
 - faster rcnn
 - resnet
 - mobilnet
+
+results available in results.docx
